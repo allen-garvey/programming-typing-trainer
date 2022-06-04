@@ -5,16 +5,28 @@
         <div :class="$style.targetCharacter">
             {{ targetCharacter }}
         </div>
-        <input type="text" @keydown="onKeyPressed" />
+        <div>
+            <input 
+                type="text" 
+                @keydown="onKeyPressed" 
+                :class="$style.input"
+            />
+        </div>
     </div>
 </template>
 
 <style lang="scss" module>
 .container {
-
+    padding: 3rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .targetCharacter {
-    font-size: 3.157rem;
+    font-size: 6rem;
+}
+.input {
+    font-size: 2rem;
 }
 </style>
 
