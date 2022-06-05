@@ -10,6 +10,7 @@
                 type="text" 
                 @keydown="onKeyPressed" 
                 :class="$style.input"
+                autofocus
             />
         </div>
     </div>
@@ -46,7 +47,7 @@ export default {
     },
     methods: {
         generateTargetCharacter(){
-            const characters = `1234567890[]{}!@#$%^&*(){}?+_-.,;\`~\\|`;
+            const characters = `1234567890[]{}!@#$%^&*(){}?+_-.,;=/:\`~\\|`;
             const charactersExceptCurrent = characters.replace(this.targetCharacter, '');
             const randomIndex = Math.floor(Math.random() * charactersExceptCurrent.length);
             this.targetCharacter = charactersExceptCurrent[randomIndex];
